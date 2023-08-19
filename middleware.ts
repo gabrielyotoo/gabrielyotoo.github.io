@@ -6,7 +6,7 @@ acceptLanguage.languages(languages);
 
 export const config = {
   // matcher: '/:lng*'
-  matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)'],
+  matcher: '/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)',
 };
 
 export function middleware(req: NextRequest) {
@@ -19,6 +19,13 @@ export function middleware(req: NextRequest) {
   }
   if (!lng) {
     lng = fallbackLng;
+  }
+
+  if (
+    req.nextUrl.pathname.endsWith('.svg') ||
+    req.nextUrl.pathname.endsWith('.webp')
+  ) {
+    return NextResponse.next();
   }
 
   // Redirect if lng in path is not supported

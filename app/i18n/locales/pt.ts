@@ -1,6 +1,8 @@
 const ptBR = {
   experience: {
-    title: 'Trabalho',
+    title: 'Minhas experiências',
+    companies: 'Empresas com as quais já trabalhei',
+    techs: 'Tecnologias',
   },
   about: {
     title: 'Sobre',

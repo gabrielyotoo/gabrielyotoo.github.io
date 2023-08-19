@@ -1,12 +1,13 @@
 import '@/app/globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import Header from './components/header';
 import Footer from './components/footer';
 import { NextJsLayout } from '@/app/types/pages';
 import { languages } from '../i18n/config';
 
-const inter = Inter({ subsets: ['latin'] });
+import { Manrope } from 'next/font/google';
+
+const manrope = Manrope({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -25,7 +26,7 @@ export default async function RootLayout({
 }: NextJsLayout) {
   return (
     <html lang={lng}>
-      <body className={inter.className}>
+      <body className={manrope.className}>
         <Header lng={lng} />
         <div>{children}</div>
         <div>{experience}</div>

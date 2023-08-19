@@ -1,6 +1,8 @@
 const en = {
   experience: {
-    title: 'Experience',
+    title: 'My experiences',
+    companies: 'Companies I have worked with',
+    techs: 'Technologies',
   },
   about: {
     title: 'About',

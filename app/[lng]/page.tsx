@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Home = () => (
   <main className="flex h-80v flex-col items-center justify-between p-24">

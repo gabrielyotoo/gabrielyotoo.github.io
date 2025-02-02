@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export async function GET(request: Request) {
+export async function GET() {
   return NextResponse.json({
     linkedin: 'https://www.linkedin.com/in/gabriel-freitas-yamamoto/',
     instagram: 'https://www.instagram.com/gabrielyotoo',
